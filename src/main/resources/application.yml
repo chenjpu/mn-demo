@@ -3,17 +3,17 @@ micronaut:
     name: r2dbc
   metrics:
     enabled: true
-nats.addresses:
-- nats://localhost:4222
 r2dbc:
   datasources:
     default:
-      url: r2dbc:pool:mysql://localhost:3306/db
+      url: r2dbc:mysql://localhost:3306/db
       username: root
       password: '123'
-      schema-generate: CREATE_DROP
+      #schema-generate: CREATE_DROP
       dialect: MYSQL
       options:
+        driver: pool
+        protocol: mysql
         maxSize: 20
         initialSize: 5
         maxLifeTime: PT280S
@@ -24,5 +24,5 @@ r2dbc:
 logger:
   levels:
     #io.r2dbc.pool: DEBUG
-    io.micronaut.data.r2dbc: DEBUG
+    #io.micronaut.data.r2dbc: DEBUG
     #reactor.pool: DEBUG
