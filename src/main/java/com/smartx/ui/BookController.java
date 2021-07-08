@@ -7,6 +7,7 @@ import com.smartx.service.AuthorService;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Controller("/books")
 public class BookController {
@@ -27,6 +28,11 @@ public class BookController {
 	@Get("/ntx")
 	Flux<Book> notTx() {
 		return bookRepository.findAll(); // <1>
+	}
+	
+	@Get("/st")
+	Mono<String> st() {
+		return Mono.just("test"); // <1>
 	}
 	
 }
