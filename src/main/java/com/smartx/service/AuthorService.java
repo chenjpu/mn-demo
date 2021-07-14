@@ -3,7 +3,6 @@ package com.smartx.service;
 import java.util.Arrays;
 
 import javax.annotation.PostConstruct;
-import javax.inject.Singleton;
 import javax.transaction.Transactional;
 
 import com.smartx.dao.AuthorRepository;
@@ -11,6 +10,7 @@ import com.smartx.dao.BookRepository;
 import com.smartx.entity.Author;
 import com.smartx.entity.Book;
 
+import jakarta.inject.Singleton;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

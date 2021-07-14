@@ -6,9 +6,9 @@ micronaut:
 r2dbc:
   datasources:
     default:
-      url: r2dbc:mysql://localhost:3306/db
-      username: root
-      password: '123'
+      url: r2dbc:mysql://10.110.200.78:4000/r2dbc
+      username: admin
+      password: bit.aim.far-211
       #schema-generate: CREATE_DROP
       dialect: MYSQL
       options:
